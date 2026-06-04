@@ -1,0 +1,501 @@
+﻿sku_id,atc1,atc2,atc3,atc4,therapeutic_area,demand_type,price_rmb,expiry_months,vbp_status,is_generic,cold_chain,base_demand,demand_cv
+SKU_0001,C,C10,C10A,C10AC,Cardiovascular,intermittent,5.29,24,na,1,0,53,2.0
+SKU_0002,C,C09,C09A,C09AB,Cardiovascular,intermittent,20.63,24,na,1,0,38,0.95
+SKU_0003,C,C09,C09C,C09CD,Cardiovascular,intermittent,10.45,36,na,0,0,49,2.44
+SKU_0004,C,C09,C09B,C09BA,Cardiovascular,smooth,8.18,36,na,1,0,31,0.22
+SKU_0005,C,C09,C09B,C09BB,Cardiovascular,intermittent,4.08,60,selected,1,0,51,2.32
+SKU_0006,C,C09,C09C,C09CD,Cardiovascular,seasonal,51.55,60,selected,1,0,130,0.57
+SKU_0007,C,C09,C09A,C09AD,Cardiovascular,intermittent,6.4,24,na,1,0,27,1.3
+SKU_0008,C,C10,C10C,C10CC,Cardiovascular,intermittent,58.74,24,na,0,0,64,1.86
+SKU_0009,C,C09,C09A,C09AD,Cardiovascular,intermittent,86.02,36,na,1,0,78,2.45
+SKU_0010,C,C10,C10A,C10AA,Cardiovascular,intermittent,19.24,36,na,0,0,89,0.85
+SKU_0011,C,C10,C10A,C10AD,Cardiovascular,intermittent,7.86,36,na,0,0,56,1.82
+SKU_0012,C,C10,C10B,C10BD,Cardiovascular,shocked,36.66,48,non_selected,0,0,76,0.68
+SKU_0013,C,C09,C09C,C09CD,Cardiovascular,intermittent,14.73,36,na,1,0,57,1.08
+SKU_0014,C,C10,C10A,C10AB,Cardiovascular,seasonal,13.31,48,na,1,0,31,0.48
+SKU_0015,C,C08,C08B,C08BD,Cardiovascular,seasonal,74.0,24,non_selected,0,0,71,0.51
+SKU_0016,C,C10,C10A,C10AD,Cardiovascular,shocked,10.08,36,non_selected,0,0,38,0.83
+SKU_0017,C,C10,C10A,C10AC,Cardiovascular,intermittent,30.8,24,selected,1,0,46,1.06
+SKU_0018,C,C10,C10B,C10BD,Cardiovascular,smooth,155.7,24,na,0,0,68,0.15
+SKU_0019,C,C08,C08C,C08CB,Cardiovascular,intermittent,81.7,24,na,1,0,68,1.1
+SKU_0020,C,C08,C08A,C08AB,Cardiovascular,shocked,21.66,48,selected,1,0,58,0.79
+SKU_0021,C,C10,C10B,C10BD,Cardiovascular,intermittent,43.98,36,na,1,0,74,1.28
+SKU_0022,C,C09,C09B,C09BB,Cardiovascular,intermittent,4.81,36,na,1,0,62,1.9
+SKU_0023,C,C10,C10C,C10CA,Cardiovascular,seasonal,43.0,36,na,1,0,69,0.48
+SKU_0024,C,C08,C08C,C08CD,Cardiovascular,intermittent,19.38,24,na,1,0,46,2.3
+SKU_0025,C,C08,C08A,C08AD,Cardiovascular,seasonal,25.25,36,na,1,0,42,0.43
+SKU_0026,C,C10,C10B,C10BA,Cardiovascular,intermittent,11.36,48,non_selected,0,0,61,1.23
+SKU_0027,C,C09,C09B,C09BB,Cardiovascular,intermittent,5.49,36,selected,1,0,22,2.18
+SKU_0028,C,C08,C08A,C08AD,Cardiovascular,intermittent,6.52,36,selected,1,0,81,2.31
+SKU_0029,C,C10,C10C,C10CD,Cardiovascular,intermittent,65.75,36,na,1,0,49,0.87
+SKU_0030,C,C10,C10B,C10BC,Cardiovascular,smooth,23.79,36,selected,1,0,59,0.12
+SKU_0031,C,C09,C09C,C09CC,Cardiovascular,intermittent,4.37,36,non_selected,1,0,73,1.55
+SKU_0032,C,C10,C10B,C10BA,Cardiovascular,smooth,9.45,24,na,1,0,20,0.15
+SKU_0033,C,C08,C08A,C08AA,Cardiovascular,shocked,13.31,36,selected,1,0,23,0.55
+SKU_0034,C,C08,C08B,C08BA,Cardiovascular,seasonal,183.54,24,na,1,0,35,0.62
+SKU_0035,C,C09,C09B,C09BB,Cardiovascular,intermittent,74.9,24,na,1,0,76,1.08
+SKU_0036,C,C10,C10B,C10BA,Cardiovascular,intermittent,20.33,36,selected,1,0,64,2.18
+SKU_0037,C,C10,C10A,C10AD,Cardiovascular,intermittent,176.05,60,non_selected,0,0,36,2.24
+SKU_0038,C,C09,C09B,C09BB,Cardiovascular,seasonal,25.77,36,na,1,0,57,0.51
+SKU_0039,C,C10,C10A,C10AC,Cardiovascular,intermittent,18.27,24,selected,1,0,59,1.53
+SKU_0040,C,C08,C08C,C08CA,Cardiovascular,seasonal,15.76,24,na,1,0,20,0.33
+SKU_0041,C,C08,C08A,C08AC,Cardiovascular,smooth,7.31,24,non_selected,1,0,101,0.19
+SKU_0042,C,C08,C08C,C08CA,Cardiovascular,intermittent,72.12,48,selected,1,0,46,1.73
+SKU_0043,C,C08,C08C,C08CC,Cardiovascular,intermittent,6.84,36,non_selected,1,0,48,1.52
+SKU_0044,C,C09,C09A,C09AB,Cardiovascular,intermittent,22.18,24,na,0,0,73,1.2
+SKU_0045,C,C10,C10A,C10AA,Cardiovascular,intermittent,26.71,24,na,1,0,15,0.99
+SKU_0046,C,C10,C10A,C10AA,Cardiovascular,intermittent,132.16,36,selected,1,0,62,1.96
+SKU_0047,C,C09,C09A,C09AC,Cardiovascular,intermittent,38.22,24,na,1,0,16,2.37
+SKU_0048,C,C08,C08C,C08CC,Cardiovascular,shocked,41.22,36,non_selected,0,0,110,0.93
+SKU_0049,C,C08,C08C,C08CD,Cardiovascular,shocked,8.0,24,selected,1,0,40,0.75
+SKU_0050,C,C09,C09B,C09BD,Cardiovascular,smooth,8.29,60,non_selected,1,0,16,0.31
+SKU_0051,C,C08,C08A,C08AB,Cardiovascular,smooth,31.03,48,na,1,0,49,0.22
+SKU_0052,C,C09,C09A,C09AB,Cardiovascular,shocked,69.73,24,selected,1,0,54,0.89
+SKU_0053,C,C09,C09A,C09AC,Cardiovascular,smooth,18.11,24,na,1,0,91,0.28
+SKU_0054,C,C08,C08A,C08AB,Cardiovascular,intermittent,26.32,24,na,0,0,49,1.94
+SKU_0055,C,C09,C09C,C09CD,Cardiovascular,smooth,37.24,36,na,1,0,69,0.13
+SKU_0056,C,C10,C10A,C10AA,Cardiovascular,smooth,10.14,24,selected,1,0,86,0.14
+SKU_0057,C,C09,C09B,C09BB,Cardiovascular,intermittent,57.59,24,na,1,0,51,1.47
+SKU_0058,C,C10,C10B,C10BC,Cardiovascular,intermittent,1.48,48,na,1,0,49,1.16
+SKU_0059,C,C10,C10C,C10CC,Cardiovascular,intermittent,11.27,36,na,1,0,29,1.5
+SKU_0060,C,C10,C10C,C10CA,Cardiovascular,shocked,39.38,36,selected,1,0,36,0.32
+SKU_0061,C,C09,C09A,C09AA,Cardiovascular,intermittent,70.41,24,na,1,0,44,1.87
+SKU_0062,C,C10,C10B,C10BC,Cardiovascular,shocked,21.13,24,selected,1,0,61,0.45
+SKU_0063,C,C10,C10B,C10BB,Cardiovascular,intermittent,49.85,24,na,1,0,60,1.7
+SKU_0064,C,C08,C08B,C08BB,Cardiovascular,intermittent,29.18,24,na,1,0,52,0.95
+SKU_0065,C,C09,C09A,C09AA,Cardiovascular,seasonal,4.27,36,na,1,0,127,0.58
+SKU_0066,C,C08,C08C,C08CB,Cardiovascular,seasonal,9.5,24,na,1,0,22,0.38
+SKU_0067,C,C10,C10B,C10BC,Cardiovascular,smooth,39.47,48,na,1,0,50,0.1
+SKU_0068,C,C09,C09A,C09AB,Cardiovascular,smooth,59.71,36,non_selected,1,0,19,0.16
+SKU_0069,C,C09,C09C,C09CD,Cardiovascular,intermittent,38.55,24,na,1,0,61,1.62
+SKU_0070,C,C10,C10C,C10CA,Cardiovascular,intermittent,2.74,36,na,1,0,61,1.04
+SKU_0071,C,C08,C08A,C08AA,Cardiovascular,intermittent,5.96,36,na,1,0,50,0.91
+SKU_0072,C,C09,C09A,C09AD,Cardiovascular,intermittent,22.36,48,selected,1,0,37,1.88
+SKU_0073,C,C09,C09A,C09AA,Cardiovascular,intermittent,34.83,36,na,1,0,52,1.55
+SKU_0074,C,C08,C08A,C08AA,Cardiovascular,intermittent,52.82,24,na,1,0,30,1.87
+SKU_0075,C,C09,C09C,C09CC,Cardiovascular,intermittent,28.34,36,selected,1,0,36,1.22
+SKU_0076,C,C10,C10A,C10AB,Cardiovascular,seasonal,32.61,36,na,1,0,48,0.53
+SKU_0077,C,C10,C10A,C10AD,Cardiovascular,smooth,6.44,24,selected,1,0,68,0.26
+SKU_0078,C,C10,C10C,C10CA,Cardiovascular,intermittent,102.18,60,na,0,0,18,2.35
+SKU_0079,C,C09,C09B,C09BA,Cardiovascular,seasonal,9.72,36,na,0,0,34,0.34
+SKU_0080,C,C09,C09A,C09AB,Cardiovascular,shocked,95.8,24,selected,1,0,38,0.53
+SKU_0081,C,C09,C09C,C09CC,Cardiovascular,intermittent,12.0,24,na,1,0,28,2.36
+SKU_0082,C,C09,C09C,C09CB,Cardiovascular,intermittent,2.76,48,na,0,0,42,1.08
+SKU_0083,C,C08,C08A,C08AA,Cardiovascular,intermittent,29.24,24,na,0,0,56,1.75
+SKU_0084,C,C09,C09C,C09CA,Cardiovascular,smooth,20.43,24,na,1,0,82,0.24
+SKU_0085,C,C08,C08A,C08AA,Cardiovascular,intermittent,13.52,36,na,1,0,83,1.48
+SKU_0086,C,C09,C09C,C09CC,Cardiovascular,smooth,0.83,24,na,1,0,58,0.34
+SKU_0087,C,C10,C10B,C10BC,Cardiovascular,intermittent,14.11,24,na,0,0,48,1.91
+SKU_0088,C,C10,C10B,C10BC,Cardiovascular,seasonal,17.18,36,selected,1,0,39,0.4
+SKU_0089,C,C10,C10C,C10CD,Cardiovascular,smooth,80.74,36,selected,1,0,54,0.37
+SKU_0090,C,C08,C08C,C08CB,Cardiovascular,intermittent,57.05,24,na,1,0,77,2.26
+SKU_0091,C,C10,C10B,C10BB,Cardiovascular,intermittent,8.99,24,na,1,0,23,1.67
+SKU_0092,C,C08,C08B,C08BA,Cardiovascular,intermittent,17.36,24,na,1,0,74,1.7
+SKU_0093,C,C09,C09A,C09AB,Cardiovascular,smooth,79.97,36,na,1,0,29,0.18
+SKU_0094,C,C08,C08A,C08AA,Cardiovascular,smooth,6.74,48,na,1,0,34,0.32
+SKU_0095,C,C10,C10A,C10AD,Cardiovascular,intermittent,20.72,24,selected,1,0,66,1.84
+SKU_0096,C,C09,C09B,C09BC,Cardiovascular,intermittent,17.3,48,selected,1,0,61,1.64
+SKU_0097,C,C08,C08C,C08CB,Cardiovascular,intermittent,3.24,36,na,1,0,92,1.58
+SKU_0098,C,C10,C10C,C10CB,Cardiovascular,intermittent,8.63,36,na,1,0,32,1.03
+SKU_0099,C,C09,C09A,C09AC,Cardiovascular,intermittent,14.92,24,non_selected,1,0,80,1.88
+SKU_0100,C,C08,C08B,C08BA,Cardiovascular,intermittent,45.92,36,na,1,0,48,1.74
+SKU_0101,J,J02,J02B,J02BC,Antiinfectives,smooth,10.58,36,na,1,0,26,0.35
+SKU_0102,J,J02,J02C,J02CB,Antiinfectives,intermittent,45.5,36,na,1,0,27,1.49
+SKU_0103,J,J01,J01C,J01CD,Antiinfectives,intermittent,67.76,48,na,1,0,10,2.28
+SKU_0104,J,J02,J02C,J02CC,Antiinfectives,smooth,40.55,24,non_selected,0,1,26,0.18
+SKU_0105,J,J01,J01B,J01BB,Antiinfectives,intermittent,10.32,36,selected,1,0,22,1.3
+SKU_0106,J,J02,J02A,J02AA,Antiinfectives,seasonal,7.65,48,na,0,0,17,0.79
+SKU_0107,J,J01,J01B,J01BD,Antiinfectives,intermittent,52.57,36,na,1,0,29,1.67
+SKU_0108,J,J02,J02C,J02CB,Antiinfectives,intermittent,36.27,24,non_selected,1,0,11,1.82
+SKU_0109,J,J01,J01A,J01AC,Antiinfectives,intermittent,39.88,48,na,0,0,16,1.81
+SKU_0110,J,J02,J02A,J02AB,Antiinfectives,intermittent,8.63,24,na,1,1,35,1.28
+SKU_0111,J,J02,J02C,J02CB,Antiinfectives,seasonal,15.79,36,na,0,0,19,0.55
+SKU_0112,J,J02,J02B,J02BA,Antiinfectives,shocked,26.27,36,non_selected,0,0,29,0.47
+SKU_0113,J,J01,J01C,J01CD,Antiinfectives,intermittent,160.39,48,na,1,0,17,2.28
+SKU_0114,J,J01,J01C,J01CC,Antiinfectives,smooth,35.75,48,na,1,1,61,0.16
+SKU_0115,J,J01,J01B,J01BC,Antiinfectives,shocked,30.32,36,selected,1,0,59,0.83
+SKU_0116,J,J02,J02A,J02AD,Antiinfectives,intermittent,25.95,24,na,1,0,36,1.08
+SKU_0117,J,J02,J02B,J02BA,Antiinfectives,intermittent,9.49,24,na,0,0,18,0.84
+SKU_0118,J,J01,J01A,J01AB,Antiinfectives,intermittent,31.58,48,na,0,1,39,2.25
+SKU_0119,J,J01,J01C,J01CA,Antiinfectives,intermittent,18.96,24,na,1,0,23,1.51
+SKU_0120,J,J01,J01B,J01BC,Antiinfectives,seasonal,5.07,60,na,1,0,11,0.54
+SKU_0121,J,J02,J02B,J02BA,Antiinfectives,intermittent,113.58,48,selected,1,0,38,0.86
+SKU_0122,J,J02,J02B,J02BC,Antiinfectives,smooth,98.99,36,na,1,0,33,0.15
+SKU_0123,J,J02,J02B,J02BA,Antiinfectives,seasonal,3.02,48,na,1,1,23,0.6
+SKU_0124,J,J02,J02C,J02CA,Antiinfectives,intermittent,8.8,60,non_selected,1,0,21,1.16
+SKU_0125,J,J01,J01B,J01BD,Antiinfectives,smooth,21.27,24,na,0,0,13,0.31
+SKU_0126,J,J02,J02C,J02CB,Antiinfectives,smooth,14.33,36,non_selected,0,0,65,0.19
+SKU_0127,J,J02,J02B,J02BD,Antiinfectives,intermittent,105.61,24,selected,1,1,28,1.57
+SKU_0128,J,J01,J01C,J01CA,Antiinfectives,smooth,62.81,36,selected,1,0,22,0.2
+SKU_0129,J,J02,J02A,J02AD,Antiinfectives,intermittent,269.45,36,na,0,1,10,1.64
+SKU_0130,J,J02,J02B,J02BC,Antiinfectives,intermittent,84.62,24,na,0,0,33,1.52
+SKU_0131,J,J02,J02B,J02BD,Antiinfectives,intermittent,43.67,36,na,1,1,61,2.15
+SKU_0132,J,J01,J01B,J01BC,Antiinfectives,intermittent,3.15,48,na,1,0,17,2.35
+SKU_0133,J,J01,J01B,J01BD,Antiinfectives,intermittent,32.3,36,na,0,0,23,1.79
+SKU_0134,J,J02,J02B,J02BC,Antiinfectives,smooth,7.26,24,non_selected,0,0,49,0.39
+SKU_0135,J,J01,J01C,J01CC,Antiinfectives,intermittent,8.59,36,na,1,0,24,2.41
+SKU_0136,J,J01,J01B,J01BD,Antiinfectives,intermittent,5.08,36,na,1,0,19,1.75
+SKU_0137,J,J01,J01A,J01AD,Antiinfectives,seasonal,172.32,24,na,1,1,24,0.46
+SKU_0138,J,J01,J01C,J01CB,Antiinfectives,intermittent,5.8,24,na,1,1,8,1.38
+SKU_0139,J,J02,J02C,J02CD,Antiinfectives,smooth,36.75,24,non_selected,1,1,37,0.17
+SKU_0140,J,J01,J01B,J01BC,Antiinfectives,intermittent,7.6,48,non_selected,1,0,45,0.85
+SKU_0141,J,J02,J02A,J02AB,Antiinfectives,shocked,29.05,36,non_selected,1,0,6,0.72
+SKU_0142,J,J01,J01A,J01AA,Antiinfectives,intermittent,62.31,48,selected,1,0,36,1.36
+SKU_0143,J,J02,J02C,J02CB,Antiinfectives,shocked,30.77,48,selected,1,0,9,0.53
+SKU_0144,J,J01,J01B,J01BC,Antiinfectives,intermittent,6.83,24,na,1,0,22,1.09
+SKU_0145,J,J02,J02B,J02BB,Antiinfectives,intermittent,19.27,24,selected,1,0,19,1.45
+SKU_0146,J,J02,J02A,J02AC,Antiinfectives,intermittent,19.61,36,selected,1,0,22,0.9
+SKU_0147,J,J01,J01A,J01AB,Antiinfectives,smooth,32.15,24,na,1,0,27,0.13
+SKU_0148,J,J02,J02B,J02BB,Antiinfectives,seasonal,50.58,36,na,0,0,28,0.35
+SKU_0149,J,J02,J02A,J02AB,Antiinfectives,shocked,4.05,36,selected,1,0,35,0.3
+SKU_0150,J,J02,J02B,J02BA,Antiinfectives,intermittent,1.31,24,na,1,0,11,1.27
+SKU_0151,J,J01,J01C,J01CB,Antiinfectives,intermittent,8.75,48,na,1,1,35,1.71
+SKU_0152,J,J02,J02A,J02AC,Antiinfectives,seasonal,13.03,24,na,0,0,39,0.52
+SKU_0153,J,J01,J01C,J01CA,Antiinfectives,intermittent,3.13,60,na,0,0,7,0.95
+SKU_0154,J,J01,J01C,J01CA,Antiinfectives,seasonal,39.49,24,na,0,0,30,0.63
+SKU_0155,J,J02,J02A,J02AB,Antiinfectives,seasonal,3.1,36,non_selected,1,0,22,0.58
+SKU_0156,J,J02,J02A,J02AA,Antiinfectives,intermittent,159.52,48,na,1,0,3,2.46
+SKU_0157,J,J02,J02A,J02AD,Antiinfectives,shocked,11.03,36,non_selected,0,0,29,0.88
+SKU_0158,J,J02,J02B,J02BA,Antiinfectives,smooth,13.86,24,na,1,1,28,0.22
+SKU_0159,J,J01,J01B,J01BD,Antiinfectives,intermittent,46.98,24,selected,1,0,5,1.48
+SKU_0160,J,J02,J02B,J02BA,Antiinfectives,intermittent,86.66,48,selected,1,0,17,1.49
+SKU_0161,J,J02,J02C,J02CB,Antiinfectives,seasonal,66.05,60,na,1,0,5,0.37
+SKU_0162,J,J02,J02B,J02BB,Antiinfectives,smooth,15.46,36,na,0,0,35,0.19
+SKU_0163,J,J02,J02B,J02BA,Antiinfectives,smooth,21.43,36,na,1,0,23,0.4
+SKU_0164,J,J01,J01C,J01CD,Antiinfectives,seasonal,120.17,36,na,0,0,15,0.61
+SKU_0165,J,J02,J02C,J02CD,Antiinfectives,intermittent,10.25,36,na,1,0,12,1.56
+SKU_0166,J,J01,J01C,J01CC,Antiinfectives,intermittent,15.63,36,na,1,0,18,2.14
+SKU_0167,J,J01,J01B,J01BC,Antiinfectives,smooth,12.59,36,na,0,0,26,0.26
+SKU_0168,J,J01,J01A,J01AD,Antiinfectives,seasonal,40.25,24,na,1,0,48,0.73
+SKU_0169,J,J02,J02A,J02AB,Antiinfectives,intermittent,38.08,60,selected,1,0,17,2.23
+SKU_0170,J,J02,J02A,J02AD,Antiinfectives,intermittent,179.69,36,selected,1,0,17,1.06
+SKU_0171,J,J02,J02A,J02AC,Antiinfectives,intermittent,24.58,24,na,1,1,10,2.12
+SKU_0172,J,J01,J01C,J01CD,Antiinfectives,intermittent,6.26,36,na,1,1,15,2.33
+SKU_0173,J,J02,J02A,J02AA,Antiinfectives,intermittent,16.88,24,na,1,0,34,2.45
+SKU_0174,J,J01,J01C,J01CD,Antiinfectives,smooth,269.89,36,non_selected,1,0,30,0.21
+SKU_0175,J,J02,J02B,J02BA,Antiinfectives,smooth,6.75,24,non_selected,1,0,11,0.18
+SKU_0176,J,J01,J01B,J01BA,Antiinfectives,intermittent,78.46,36,selected,1,0,39,1.73
+SKU_0177,J,J01,J01A,J01AB,Antiinfectives,intermittent,82.12,36,na,1,1,26,1.38
+SKU_0178,J,J02,J02C,J02CA,Antiinfectives,intermittent,38.23,36,na,1,0,32,1.07
+SKU_0179,J,J02,J02B,J02BD,Antiinfectives,intermittent,59.16,36,selected,1,0,30,1.33
+SKU_0180,J,J01,J01B,J01BC,Antiinfectives,intermittent,15.85,36,na,1,0,30,0.82
+SKU_0181,J,J01,J01B,J01BA,Antiinfectives,intermittent,26.67,24,na,1,0,65,1.81
+SKU_0182,J,J01,J01B,J01BA,Antiinfectives,smooth,12.43,24,na,0,1,9,0.25
+SKU_0183,J,J01,J01A,J01AD,Antiinfectives,seasonal,2.74,36,na,1,0,21,0.62
+SKU_0184,J,J01,J01B,J01BD,Antiinfectives,seasonal,21.73,48,selected,1,0,2,0.46
+SKU_0185,J,J01,J01A,J01AB,Antiinfectives,intermittent,52.52,24,selected,1,0,14,1.88
+SKU_0186,J,J02,J02C,J02CC,Antiinfectives,intermittent,71.38,60,selected,1,0,32,1.99
+SKU_0187,J,J02,J02B,J02BB,Antiinfectives,seasonal,21.29,36,na,1,0,47,0.39
+SKU_0188,J,J01,J01A,J01AB,Antiinfectives,shocked,15.9,36,non_selected,0,0,28,0.34
+SKU_0189,J,J02,J02A,J02AC,Antiinfectives,shocked,23.93,36,selected,1,0,13,0.98
+SKU_0190,J,J02,J02B,J02BC,Antiinfectives,intermittent,6.4,48,na,1,1,28,1.39
+SKU_0191,J,J01,J01C,J01CB,Antiinfectives,intermittent,5.17,36,na,1,0,35,1.64
+SKU_0192,J,J01,J01B,J01BA,Antiinfectives,intermittent,39.11,24,na,1,0,8,1.06
+SKU_0193,J,J02,J02C,J02CB,Antiinfectives,smooth,81.26,36,na,1,0,46,0.26
+SKU_0194,J,J02,J02B,J02BB,Antiinfectives,intermittent,1.3,36,na,1,0,19,1.91
+SKU_0195,J,J02,J02C,J02CD,Antiinfectives,smooth,224.08,24,non_selected,1,0,42,0.33
+SKU_0196,J,J02,J02B,J02BC,Antiinfectives,seasonal,13.0,48,selected,1,0,22,0.69
+SKU_0197,J,J01,J01B,J01BA,Antiinfectives,smooth,3.08,24,na,1,0,15,0.13
+SKU_0198,J,J01,J01C,J01CC,Antiinfectives,seasonal,1.56,36,na,1,0,51,0.76
+SKU_0199,J,J02,J02B,J02BB,Antiinfectives,intermittent,38.25,36,na,1,0,93,1.42
+SKU_0200,J,J02,J02C,J02CA,Antiinfectives,intermittent,25.01,36,na,1,0,36,2.47
+SKU_0201,A,A10,A10B,A10BA,Alimentary/Metabolism,seasonal,20.23,60,non_selected,1,0,44,0.31
+SKU_0202,A,A02,A02B,A02BB,Alimentary/Metabolism,smooth,7.95,36,na,1,0,39,0.19
+SKU_0203,A,A10,A10B,A10BC,Alimentary/Metabolism,intermittent,97.62,24,na,1,0,38,0.99
+SKU_0204,A,A02,A02B,A02BA,Alimentary/Metabolism,seasonal,70.14,24,na,1,0,53,0.48
+SKU_0205,A,A10,A10C,A10CB,Alimentary/Metabolism,shocked,90.78,36,selected,1,0,18,0.35
+SKU_0206,A,A10,A10B,A10BA,Alimentary/Metabolism,intermittent,83.53,60,na,0,0,55,1.41
+SKU_0207,A,A10,A10C,A10CA,Alimentary/Metabolism,seasonal,12.76,36,non_selected,1,0,52,0.43
+SKU_0208,A,A10,A10B,A10BC,Alimentary/Metabolism,smooth,44.74,24,na,1,0,26,0.22
+SKU_0209,A,A10,A10B,A10BC,Alimentary/Metabolism,intermittent,4.12,24,selected,1,0,32,1.3
+SKU_0210,A,A10,A10C,A10CB,Alimentary/Metabolism,intermittent,33.32,48,non_selected,1,0,91,1.88
+SKU_0211,A,A02,A02B,A02BD,Alimentary/Metabolism,intermittent,62.23,36,na,0,0,36,1.82
+SKU_0212,A,A10,A10A,A10AC,Alimentary/Metabolism,intermittent,13.96,36,na,1,0,30,2.48
+SKU_0213,A,A10,A10C,A10CD,Alimentary/Metabolism,seasonal,52.1,48,na,1,0,24,0.6
+SKU_0214,A,A10,A10A,A10AA,Alimentary/Metabolism,intermittent,20.97,24,selected,1,0,19,1.08
+SKU_0215,A,A02,A02A,A02AC,Alimentary/Metabolism,intermittent,17.6,48,na,1,0,30,2.45
+SKU_0216,A,A02,A02B,A02BD,Alimentary/Metabolism,intermittent,10.99,36,na,1,0,34,1.6
+SKU_0217,A,A02,A02C,A02CD,Alimentary/Metabolism,seasonal,16.1,36,na,1,0,26,0.54
+SKU_0218,A,A10,A10A,A10AA,Alimentary/Metabolism,smooth,309.17,24,na,0,0,31,0.27
+SKU_0219,A,A02,A02B,A02BC,Alimentary/Metabolism,smooth,8.15,24,selected,1,0,55,0.36
+SKU_0220,A,A10,A10A,A10AC,Alimentary/Metabolism,intermittent,10.07,36,non_selected,0,0,24,1.5
+SKU_0221,A,A02,A02A,A02AA,Alimentary/Metabolism,seasonal,3.27,36,na,1,0,54,0.74
+SKU_0222,A,A02,A02B,A02BD,Alimentary/Metabolism,intermittent,38.18,36,na,0,0,74,0.94
+SKU_0223,A,A10,A10A,A10AC,Alimentary/Metabolism,intermittent,11.14,36,na,1,0,37,1.0
+SKU_0224,A,A10,A10C,A10CD,Alimentary/Metabolism,intermittent,426.75,36,na,1,0,43,0.94
+SKU_0225,A,A10,A10B,A10BA,Alimentary/Metabolism,smooth,196.59,36,na,1,0,58,0.23
+SKU_0226,A,A10,A10A,A10AC,Alimentary/Metabolism,intermittent,33.54,48,na,0,0,21,2.09
+SKU_0227,A,A10,A10C,A10CD,Alimentary/Metabolism,smooth,1.51,24,na,1,0,70,0.29
+SKU_0228,A,A10,A10A,A10AA,Alimentary/Metabolism,shocked,816.14,24,selected,1,0,66,0.37
+SKU_0229,A,A02,A02A,A02AD,Alimentary/Metabolism,intermittent,11.05,24,non_selected,1,0,23,0.85
+SKU_0230,A,A10,A10C,A10CC,Alimentary/Metabolism,smooth,33.41,24,na,1,0,12,0.14
+SKU_0231,A,A10,A10B,A10BB,Alimentary/Metabolism,shocked,3.52,24,non_selected,0,0,41,0.99
+SKU_0232,A,A10,A10C,A10CC,Alimentary/Metabolism,smooth,59.42,24,non_selected,1,0,36,0.15
+SKU_0233,A,A10,A10C,A10CC,Alimentary/Metabolism,intermittent,32.35,24,na,0,0,33,2.44
+SKU_0234,A,A10,A10C,A10CA,Alimentary/Metabolism,intermittent,11.4,24,na,1,0,31,1.86
+SKU_0235,A,A10,A10B,A10BC,Alimentary/Metabolism,seasonal,11.49,36,na,0,0,34,0.75
+SKU_0236,A,A10,A10B,A10BA,Alimentary/Metabolism,intermittent,8.9,36,na,0,0,38,2.41
+SKU_0237,A,A02,A02B,A02BC,Alimentary/Metabolism,seasonal,997.82,36,na,1,0,17,0.48
+SKU_0238,A,A10,A10C,A10CA,Alimentary/Metabolism,shocked,84.16,48,selected,1,0,30,0.44
+SKU_0239,A,A10,A10A,A10AA,Alimentary/Metabolism,intermittent,5.88,24,na,0,0,23,1.18
+SKU_0240,A,A10,A10B,A10BD,Alimentary/Metabolism,shocked,295.21,36,non_selected,0,0,46,0.67
+SKU_0241,A,A02,A02C,A02CC,Alimentary/Metabolism,shocked,63.04,24,selected,1,0,47,0.88
+SKU_0242,A,A10,A10C,A10CA,Alimentary/Metabolism,smooth,24.95,36,na,1,0,39,0.18
+SKU_0243,A,A02,A02B,A02BC,Alimentary/Metabolism,smooth,7.76,48,non_selected,0,0,31,0.26
+SKU_0244,A,A02,A02B,A02BD,Alimentary/Metabolism,smooth,11.38,36,na,1,0,50,0.16
+SKU_0245,A,A02,A02C,A02CC,Alimentary/Metabolism,intermittent,16.68,48,na,1,0,51,1.89
+SKU_0246,A,A10,A10A,A10AA,Alimentary/Metabolism,seasonal,118.81,24,selected,1,0,28,0.53
+SKU_0247,A,A02,A02B,A02BD,Alimentary/Metabolism,intermittent,0.97,24,na,0,0,83,1.0
+SKU_0248,A,A10,A10C,A10CD,Alimentary/Metabolism,seasonal,2.23,24,na,0,0,36,0.46
+SKU_0249,A,A10,A10A,A10AB,Alimentary/Metabolism,intermittent,46.18,48,na,1,0,76,2.4
+SKU_0250,A,A02,A02A,A02AD,Alimentary/Metabolism,smooth,3.99,48,na,1,0,23,0.23
+SKU_0251,A,A10,A10B,A10BD,Alimentary/Metabolism,shocked,8.17,24,selected,1,0,43,0.89
+SKU_0252,A,A10,A10B,A10BC,Alimentary/Metabolism,smooth,63.97,60,selected,1,0,65,0.31
+SKU_0253,A,A02,A02A,A02AA,Alimentary/Metabolism,intermittent,20.0,24,selected,1,0,21,0.99
+SKU_0254,A,A02,A02B,A02BC,Alimentary/Metabolism,intermittent,88.42,48,na,1,0,30,2.3
+SKU_0255,A,A10,A10A,A10AC,Alimentary/Metabolism,intermittent,8.24,36,selected,1,0,29,1.9
+SKU_0256,A,A10,A10B,A10BB,Alimentary/Metabolism,intermittent,66.85,48,na,0,0,47,1.21
+SKU_0257,A,A02,A02B,A02BB,Alimentary/Metabolism,intermittent,7.16,48,na,1,0,64,0.87
+SKU_0258,A,A02,A02B,A02BA,Alimentary/Metabolism,seasonal,47.39,36,non_selected,0,0,52,0.69
+SKU_0259,A,A02,A02A,A02AB,Alimentary/Metabolism,smooth,2.08,24,selected,1,0,24,0.29
+SKU_0260,A,A02,A02C,A02CA,Alimentary/Metabolism,intermittent,44.89,36,na,1,0,51,1.19
+SKU_0261,A,A02,A02B,A02BD,Alimentary/Metabolism,intermittent,24.71,36,non_selected,0,0,28,1.91
+SKU_0262,A,A10,A10C,A10CD,Alimentary/Metabolism,smooth,4.43,24,na,1,0,26,0.27
+SKU_0263,A,A10,A10A,A10AA,Alimentary/Metabolism,intermittent,77.28,48,na,1,0,47,0.9
+SKU_0264,A,A02,A02B,A02BB,Alimentary/Metabolism,smooth,5.44,60,na,0,0,33,0.3
+SKU_0265,A,A10,A10B,A10BB,Alimentary/Metabolism,shocked,28.17,24,selected,1,0,75,0.9
+SKU_0266,A,A02,A02A,A02AC,Alimentary/Metabolism,intermittent,1.16,36,na,1,0,49,1.49
+SKU_0267,A,A10,A10B,A10BB,Alimentary/Metabolism,intermittent,12.08,36,na,1,0,48,2.4
+SKU_0268,A,A10,A10C,A10CA,Alimentary/Metabolism,shocked,10.0,60,selected,1,0,45,0.46
+SKU_0269,A,A10,A10C,A10CA,Alimentary/Metabolism,smooth,37.88,36,selected,1,0,30,0.21
+SKU_0270,A,A02,A02B,A02BC,Alimentary/Metabolism,intermittent,20.07,24,na,1,0,28,0.85
+SKU_0271,A,A10,A10A,A10AA,Alimentary/Metabolism,smooth,27.63,24,na,1,0,25,0.33
+SKU_0272,A,A10,A10C,A10CA,Alimentary/Metabolism,intermittent,98.06,24,na,1,0,66,2.24
+SKU_0273,A,A10,A10B,A10BB,Alimentary/Metabolism,shocked,2.01,24,selected,1,0,29,0.71
+SKU_0274,A,A10,A10C,A10CA,Alimentary/Metabolism,intermittent,45.77,48,na,1,0,33,1.61
+SKU_0275,A,A10,A10B,A10BD,Alimentary/Metabolism,seasonal,60.7,24,na,1,0,38,0.45
+SKU_0276,A,A10,A10A,A10AA,Alimentary/Metabolism,intermittent,13.74,48,selected,1,0,65,1.91
+SKU_0277,A,A10,A10B,A10BA,Alimentary/Metabolism,intermittent,5.56,24,na,1,0,58,1.8
+SKU_0278,A,A02,A02B,A02BB,Alimentary/Metabolism,smooth,1.42,60,na,1,0,20,0.32
+SKU_0279,A,A02,A02B,A02BC,Alimentary/Metabolism,intermittent,8.18,36,selected,1,0,12,2.01
+SKU_0280,A,A10,A10C,A10CB,Alimentary/Metabolism,smooth,8.91,24,non_selected,1,0,51,0.14
+SKU_0281,A,A02,A02C,A02CC,Alimentary/Metabolism,intermittent,8.16,36,na,1,0,48,1.25
+SKU_0282,A,A02,A02C,A02CA,Alimentary/Metabolism,smooth,22.79,36,selected,1,0,22,0.23
+SKU_0283,A,A02,A02C,A02CD,Alimentary/Metabolism,smooth,38.34,48,na,0,0,29,0.12
+SKU_0284,A,A10,A10A,A10AB,Alimentary/Metabolism,seasonal,62.22,60,selected,1,0,60,0.77
+SKU_0285,A,A10,A10A,A10AC,Alimentary/Metabolism,intermittent,61.87,36,na,1,0,41,2.23
+SKU_0286,A,A10,A10C,A10CA,Alimentary/Metabolism,intermittent,13.63,36,non_selected,0,0,83,1.1
+SKU_0287,A,A02,A02B,A02BC,Alimentary/Metabolism,shocked,21.07,24,non_selected,1,0,60,0.87
+SKU_0288,A,A10,A10A,A10AD,Alimentary/Metabolism,seasonal,120.58,36,na,1,0,30,0.44
+SKU_0289,A,A10,A10A,A10AC,Alimentary/Metabolism,intermittent,23.86,48,na,1,0,15,0.94
+SKU_0290,A,A10,A10C,A10CB,Alimentary/Metabolism,seasonal,41.13,24,na,1,0,70,0.4
+SKU_0291,A,A10,A10B,A10BA,Alimentary/Metabolism,smooth,79.52,24,na,1,0,16,0.13
+SKU_0292,A,A02,A02A,A02AA,Alimentary/Metabolism,smooth,22.04,36,na,1,0,40,0.32
+SKU_0293,A,A02,A02B,A02BB,Alimentary/Metabolism,shocked,8.66,36,selected,1,0,27,0.74
+SKU_0294,A,A10,A10B,A10BB,Alimentary/Metabolism,intermittent,14.5,36,na,1,0,88,1.69
+SKU_0295,A,A10,A10B,A10BA,Alimentary/Metabolism,smooth,10.28,24,na,1,0,15,0.29
+SKU_0296,A,A10,A10C,A10CA,Alimentary/Metabolism,intermittent,111.77,48,na,1,0,71,1.93
+SKU_0297,A,A02,A02B,A02BC,Alimentary/Metabolism,intermittent,46.39,24,selected,1,0,34,1.54
+SKU_0298,A,A10,A10C,A10CB,Alimentary/Metabolism,shocked,54.12,24,selected,1,0,65,0.76
+SKU_0299,A,A10,A10C,A10CC,Alimentary/Metabolism,intermittent,69.65,24,na,0,0,21,1.58
+SKU_0300,A,A10,A10B,A10BB,Alimentary/Metabolism,intermittent,7.4,36,na,1,0,31,1.28
+SKU_0301,R,R05,R05C,R05CB,Respiratory,intermittent,58.62,24,non_selected,0,0,16,2.16
+SKU_0302,R,R06,R06A,R06AD,Respiratory,intermittent,117.19,48,na,1,0,70,2.0
+SKU_0303,R,R05,R05B,R05BD,Respiratory,smooth,8.16,48,na,1,0,29,0.28
+SKU_0304,R,R06,R06A,R06AC,Respiratory,intermittent,100.63,48,na,1,0,58,1.07
+SKU_0305,R,R03,R03A,R03AA,Respiratory,smooth,5.92,36,selected,1,0,31,0.19
+SKU_0306,R,R06,R06B,R06BC,Respiratory,seasonal,64.19,36,na,1,0,15,0.69
+SKU_0307,R,R05,R05B,R05BA,Respiratory,intermittent,39.78,48,selected,1,0,18,1.66
+SKU_0308,R,R05,R05A,R05AB,Respiratory,intermittent,7.23,48,na,1,0,18,1.58
+SKU_0309,R,R06,R06A,R06AD,Respiratory,intermittent,19.2,24,na,0,0,23,0.94
+SKU_0310,R,R03,R03B,R03BC,Respiratory,intermittent,162.97,48,na,1,0,10,1.33
+SKU_0311,R,R06,R06C,R06CC,Respiratory,intermittent,25.82,24,na,1,0,40,1.53
+SKU_0312,R,R06,R06C,R06CB,Respiratory,intermittent,246.2,48,na,1,0,74,2.41
+SKU_0313,R,R03,R03A,R03AD,Respiratory,shocked,105.78,36,non_selected,0,0,26,0.84
+SKU_0314,R,R06,R06A,R06AA,Respiratory,smooth,12.06,48,na,1,0,67,0.18
+SKU_0315,R,R03,R03B,R03BD,Respiratory,intermittent,63.44,48,na,1,0,16,1.7
+SKU_0316,R,R03,R03C,R03CC,Respiratory,intermittent,14.44,48,na,0,0,45,1.15
+SKU_0317,R,R05,R05B,R05BD,Respiratory,smooth,11.6,36,selected,1,0,27,0.25
+SKU_0318,R,R05,R05C,R05CD,Respiratory,shocked,20.93,36,selected,1,0,13,0.35
+SKU_0319,R,R05,R05C,R05CD,Respiratory,intermittent,4.82,36,selected,1,0,18,2.17
+SKU_0320,R,R03,R03C,R03CD,Respiratory,smooth,252.69,48,na,1,0,34,0.14
+SKU_0321,R,R03,R03C,R03CD,Respiratory,intermittent,42.47,24,na,1,0,9,1.83
+SKU_0322,R,R03,R03B,R03BD,Respiratory,intermittent,13.17,36,selected,1,0,12,1.46
+SKU_0323,R,R06,R06A,R06AD,Respiratory,intermittent,2.61,48,selected,1,0,38,1.79
+SKU_0324,R,R05,R05C,R05CB,Respiratory,intermittent,56.4,60,na,1,0,72,1.18
+SKU_0325,R,R05,R05A,R05AD,Respiratory,smooth,38.03,36,na,1,0,36,0.33
+SKU_0326,R,R06,R06C,R06CB,Respiratory,intermittent,4.58,48,selected,1,0,16,1.25
+SKU_0327,R,R03,R03A,R03AD,Respiratory,seasonal,10.93,36,na,1,0,33,0.46
+SKU_0328,R,R03,R03C,R03CD,Respiratory,intermittent,13.98,24,selected,1,0,31,2.21
+SKU_0329,R,R06,R06A,R06AC,Respiratory,intermittent,58.79,36,na,1,0,4,2.43
+SKU_0330,R,R06,R06C,R06CA,Respiratory,intermittent,43.21,36,na,1,0,32,0.87
+SKU_0331,R,R06,R06C,R06CB,Respiratory,intermittent,98.96,36,selected,1,0,59,1.55
+SKU_0332,R,R05,R05A,R05AC,Respiratory,intermittent,71.2,24,na,1,0,24,1.6
+SKU_0333,R,R03,R03B,R03BD,Respiratory,intermittent,46.63,36,non_selected,1,0,20,2.27
+SKU_0334,R,R06,R06C,R06CA,Respiratory,intermittent,24.26,60,na,1,0,15,2.18
+SKU_0335,R,R03,R03C,R03CD,Respiratory,intermittent,218.0,48,na,0,0,14,1.84
+SKU_0336,R,R06,R06C,R06CD,Respiratory,intermittent,40.75,36,non_selected,1,0,25,2.22
+SKU_0337,R,R05,R05B,R05BB,Respiratory,intermittent,25.36,36,na,0,0,11,1.85
+SKU_0338,R,R06,R06B,R06BB,Respiratory,intermittent,34.13,36,na,1,0,21,1.01
+SKU_0339,R,R06,R06A,R06AB,Respiratory,intermittent,141.25,48,selected,1,0,49,1.39
+SKU_0340,R,R03,R03C,R03CD,Respiratory,intermittent,15.69,24,na,0,0,12,1.26
+SKU_0341,R,R05,R05C,R05CA,Respiratory,intermittent,12.26,36,na,0,0,15,1.42
+SKU_0342,R,R03,R03A,R03AD,Respiratory,shocked,55.77,24,selected,1,0,52,0.51
+SKU_0343,R,R06,R06B,R06BC,Respiratory,smooth,2.09,48,na,1,0,16,0.32
+SKU_0344,R,R05,R05C,R05CD,Respiratory,intermittent,12.22,36,selected,1,0,35,2.31
+SKU_0345,R,R05,R05C,R05CA,Respiratory,intermittent,18.86,36,selected,1,0,57,2.26
+SKU_0346,R,R05,R05C,R05CC,Respiratory,intermittent,11.14,24,non_selected,0,0,27,1.78
+SKU_0347,R,R05,R05B,R05BC,Respiratory,intermittent,7.0,24,selected,1,0,39,2.25
+SKU_0348,R,R06,R06A,R06AB,Respiratory,intermittent,31.7,60,na,0,0,18,2.16
+SKU_0349,R,R06,R06C,R06CD,Respiratory,intermittent,32.52,24,na,0,0,29,2.29
+SKU_0350,R,R06,R06C,R06CB,Respiratory,intermittent,101.41,24,na,0,0,56,1.74
+SKU_0351,R,R03,R03A,R03AD,Respiratory,intermittent,6.53,24,non_selected,1,0,13,2.09
+SKU_0352,R,R06,R06B,R06BB,Respiratory,intermittent,10.68,48,na,0,0,49,1.38
+SKU_0353,R,R06,R06C,R06CA,Respiratory,intermittent,11.95,36,na,1,0,26,2.49
+SKU_0354,R,R06,R06C,R06CB,Respiratory,seasonal,12.01,48,non_selected,0,0,37,0.33
+SKU_0355,R,R06,R06C,R06CC,Respiratory,intermittent,129.96,24,na,1,0,19,0.83
+SKU_0356,R,R06,R06B,R06BD,Respiratory,intermittent,44.81,24,na,0,0,23,1.25
+SKU_0357,R,R03,R03B,R03BC,Respiratory,smooth,27.19,24,na,1,0,23,0.24
+SKU_0358,R,R05,R05A,R05AA,Respiratory,seasonal,106.48,24,na,1,0,17,0.34
+SKU_0359,R,R03,R03C,R03CD,Respiratory,smooth,43.32,24,na,0,0,18,0.15
+SKU_0360,R,R05,R05A,R05AA,Respiratory,shocked,4.15,24,selected,1,0,36,0.96
+SKU_0361,R,R03,R03C,R03CC,Respiratory,seasonal,6.43,36,selected,1,0,58,0.75
+SKU_0362,R,R06,R06C,R06CD,Respiratory,seasonal,10.99,24,na,1,0,15,0.67
+SKU_0363,R,R03,R03B,R03BA,Respiratory,intermittent,51.23,36,na,0,0,5,2.33
+SKU_0364,R,R06,R06C,R06CD,Respiratory,intermittent,195.53,36,na,1,0,25,1.23
+SKU_0365,R,R03,R03B,R03BA,Respiratory,smooth,8.35,36,na,1,0,18,0.31
+SKU_0366,R,R06,R06B,R06BC,Respiratory,intermittent,2.48,48,selected,1,0,31,1.24
+SKU_0367,R,R06,R06B,R06BA,Respiratory,seasonal,20.66,24,non_selected,1,0,15,0.64
+SKU_0368,R,R05,R05A,R05AC,Respiratory,intermittent,1.5,24,selected,1,0,17,1.16
+SKU_0369,R,R03,R03B,R03BA,Respiratory,intermittent,23.56,24,na,1,0,36,2.13
+SKU_0370,R,R06,R06A,R06AD,Respiratory,shocked,30.06,24,selected,1,0,65,0.41
+SKU_0371,R,R05,R05B,R05BD,Respiratory,intermittent,13.32,36,na,1,0,24,1.93
+SKU_0372,R,R03,R03C,R03CC,Respiratory,seasonal,32.83,24,na,1,0,24,0.78
+SKU_0373,R,R06,R06A,R06AB,Respiratory,intermittent,10.31,24,na,0,0,24,0.87
+SKU_0374,R,R03,R03B,R03BD,Respiratory,intermittent,10.49,24,non_selected,0,0,26,2.22
+SKU_0375,R,R06,R06C,R06CC,Respiratory,intermittent,4.38,48,na,1,0,57,2.04
+SKU_0376,R,R06,R06B,R06BA,Respiratory,intermittent,12.48,48,na,1,0,17,1.73
+SKU_0377,R,R03,R03A,R03AB,Respiratory,intermittent,15.32,24,na,1,0,20,1.47
+SKU_0378,R,R03,R03C,R03CA,Respiratory,intermittent,15.08,24,na,1,0,46,2.13
+SKU_0379,R,R03,R03C,R03CB,Respiratory,intermittent,34.2,24,na,1,0,8,1.07
+SKU_0380,R,R03,R03C,R03CA,Respiratory,intermittent,62.27,24,selected,1,0,42,1.07
+SKU_0381,R,R05,R05B,R05BC,Respiratory,seasonal,5.51,24,na,0,0,10,0.41
+SKU_0382,R,R03,R03C,R03CB,Respiratory,intermittent,8.76,24,na,1,0,40,0.81
+SKU_0383,R,R05,R05C,R05CC,Respiratory,intermittent,35.45,24,na,0,0,17,2.22
+SKU_0384,R,R03,R03C,R03CA,Respiratory,seasonal,12.87,24,na,0,0,18,0.44
+SKU_0385,R,R06,R06B,R06BB,Respiratory,intermittent,31.06,36,na,1,0,30,1.17
+SKU_0386,R,R03,R03A,R03AC,Respiratory,shocked,151.84,24,selected,1,0,27,0.42
+SKU_0387,R,R05,R05B,R05BA,Respiratory,seasonal,9.51,60,na,1,0,34,0.36
+SKU_0388,R,R06,R06C,R06CB,Respiratory,seasonal,64.74,36,selected,1,0,30,0.38
+SKU_0389,R,R05,R05C,R05CA,Respiratory,smooth,18.8,36,na,0,0,15,0.33
+SKU_0390,R,R03,R03A,R03AC,Respiratory,seasonal,310.44,36,na,1,0,13,0.73
+SKU_0391,R,R05,R05C,R05CA,Respiratory,intermittent,9.12,24,na,1,0,16,1.6
+SKU_0392,R,R06,R06A,R06AC,Respiratory,seasonal,7.95,48,na,0,0,36,0.64
+SKU_0393,R,R03,R03C,R03CD,Respiratory,smooth,45.62,24,na,1,0,20,0.3
+SKU_0394,R,R03,R03B,R03BA,Respiratory,intermittent,14.25,48,na,1,0,3,0.94
+SKU_0395,R,R05,R05C,R05CD,Respiratory,intermittent,84.22,36,na,1,0,38,2.17
+SKU_0396,R,R03,R03A,R03AC,Respiratory,intermittent,2.71,48,na,0,0,41,1.3
+SKU_0397,R,R05,R05C,R05CD,Respiratory,shocked,2.97,48,non_selected,0,0,37,0.83
+SKU_0398,R,R06,R06A,R06AD,Respiratory,seasonal,16.52,24,na,1,0,9,0.36
+SKU_0399,R,R05,R05C,R05CD,Respiratory,shocked,18.17,24,non_selected,0,0,1,0.51
+SKU_0400,R,R06,R06A,R06AA,Respiratory,intermittent,4.23,24,na,1,0,12,1.76
+SKU_0401,N,N02,N02A,N02AB,Nervous System,intermittent,130.38,60,na,1,0,6,1.03
+SKU_0402,N,N06,N06C,N06CC,Nervous System,shocked,7.73,24,non_selected,0,0,14,0.63
+SKU_0403,N,N02,N02A,N02AB,Nervous System,intermittent,5.03,24,na,0,0,36,1.98
+SKU_0404,N,N02,N02A,N02AC,Nervous System,intermittent,166.24,36,na,0,0,16,1.55
+SKU_0405,N,N02,N02A,N02AB,Nervous System,seasonal,28.11,36,na,0,0,3,0.69
+SKU_0406,N,N06,N06C,N06CC,Nervous System,intermittent,3.13,36,selected,1,0,20,1.65
+SKU_0407,N,N05,N05B,N05BD,Nervous System,seasonal,54.79,48,na,1,0,19,0.62
+SKU_0408,N,N02,N02A,N02AD,Nervous System,intermittent,1.77,48,na,1,0,29,2.1
+SKU_0409,N,N05,N05B,N05BA,Nervous System,shocked,42.61,36,selected,1,0,19,0.69
+SKU_0410,N,N02,N02C,N02CB,Nervous System,intermittent,18.07,24,na,1,0,21,1.92
+SKU_0411,N,N02,N02C,N02CD,Nervous System,smooth,29.07,24,na,1,0,16,0.22
+SKU_0412,N,N06,N06A,N06AB,Nervous System,intermittent,14.07,24,na,1,0,12,2.28
+SKU_0413,N,N02,N02A,N02AD,Nervous System,intermittent,36.86,24,na,1,0,8,2.28
+SKU_0414,N,N06,N06A,N06AD,Nervous System,intermittent,7.54,36,non_selected,1,0,17,1.04
+SKU_0415,N,N06,N06C,N06CC,Nervous System,intermittent,36.1,24,na,1,0,69,1.34
+SKU_0416,N,N05,N05B,N05BD,Nervous System,intermittent,25.4,24,selected,1,0,15,1.1
+SKU_0417,N,N05,N05B,N05BC,Nervous System,intermittent,45.54,36,na,1,0,18,0.84
+SKU_0418,N,N02,N02B,N02BA,Nervous System,smooth,30.96,24,na,0,0,3,0.14
+SKU_0419,N,N06,N06C,N06CB,Nervous System,intermittent,14.12,24,selected,1,0,4,1.8
+SKU_0420,N,N02,N02B,N02BA,Nervous System,smooth,1.08,24,na,1,0,3,0.22
+SKU_0421,N,N06,N06C,N06CA,Nervous System,intermittent,107.82,36,na,1,0,24,1.55
+SKU_0422,N,N06,N06C,N06CC,Nervous System,intermittent,39.09,24,selected,1,0,4,2.3
+SKU_0423,N,N06,N06B,N06BD,Nervous System,intermittent,71.28,60,na,0,0,83,2.36
+SKU_0424,N,N06,N06B,N06BB,Nervous System,smooth,250.74,24,non_selected,1,0,25,0.12
+SKU_0425,N,N02,N02A,N02AD,Nervous System,smooth,2.81,24,non_selected,1,0,18,0.14
+SKU_0426,N,N02,N02C,N02CB,Nervous System,seasonal,6.33,24,na,1,0,24,0.63
+SKU_0427,N,N02,N02B,N02BA,Nervous System,smooth,22.93,36,na,1,0,24,0.13
+SKU_0428,N,N05,N05B,N05BC,Nervous System,seasonal,6.54,24,selected,1,0,19,0.61
+SKU_0429,N,N06,N06C,N06CC,Nervous System,shocked,36.72,48,selected,1,0,12,0.59
+SKU_0430,N,N06,N06B,N06BC,Nervous System,smooth,37.97,24,selected,1,0,10,0.26
+SKU_0431,N,N02,N02B,N02BA,Nervous System,shocked,29.0,36,non_selected,0,0,28,0.34
+SKU_0432,N,N06,N06A,N06AB,Nervous System,smooth,36.98,36,na,1,0,47,0.19
+SKU_0433,N,N06,N06C,N06CC,Nervous System,intermittent,79.14,36,na,1,0,2,1.77
+SKU_0434,N,N05,N05C,N05CC,Nervous System,smooth,85.25,36,na,1,0,9,0.34
+SKU_0435,N,N05,N05A,N05AA,Nervous System,intermittent,40.74,24,na,0,0,13,1.51
+SKU_0436,N,N06,N06A,N06AA,Nervous System,intermittent,21.69,48,na,1,0,12,1.86
+SKU_0437,N,N02,N02A,N02AD,Nervous System,intermittent,19.19,24,selected,1,0,17,2.31
+SKU_0438,N,N05,N05A,N05AC,Nervous System,intermittent,3.19,24,na,0,0,30,2.14
+SKU_0439,N,N05,N05B,N05BA,Nervous System,intermittent,3.1,36,na,0,0,54,1.68
+SKU_0440,N,N05,N05A,N05AA,Nervous System,intermittent,66.56,24,na,0,0,12,1.75
+SKU_0441,N,N02,N02C,N02CA,Nervous System,intermittent,91.02,48,non_selected,1,0,36,2.3
+SKU_0442,N,N06,N06B,N06BD,Nervous System,intermittent,7.47,24,selected,1,0,9,1.95
+SKU_0443,N,N05,N05A,N05AD,Nervous System,intermittent,35.53,36,selected,1,0,19,1.46
+SKU_0444,N,N05,N05C,N05CA,Nervous System,intermittent,6.15,36,selected,1,0,13,1.15
+SKU_0445,N,N05,N05C,N05CB,Nervous System,smooth,9.24,36,na,0,0,6,0.38
+SKU_0446,N,N02,N02C,N02CA,Nervous System,seasonal,10.38,36,na,0,0,22,0.75
+SKU_0447,N,N05,N05C,N05CD,Nervous System,smooth,13.05,36,non_selected,1,0,74,0.18
+SKU_0448,N,N05,N05B,N05BC,Nervous System,intermittent,12.51,36,na,0,0,14,0.91
+SKU_0449,N,N06,N06B,N06BA,Nervous System,smooth,17.21,36,selected,1,0,21,0.38
+SKU_0450,N,N05,N05C,N05CC,Nervous System,smooth,69.09,36,na,1,0,30,0.12
+SKU_0451,N,N06,N06A,N06AC,Nervous System,seasonal,38.36,36,na,1,0,32,0.54
+SKU_0452,N,N02,N02C,N02CD,Nervous System,shocked,8.02,36,non_selected,0,0,1,0.4
+SKU_0453,N,N05,N05B,N05BB,Nervous System,intermittent,72.11,24,na,1,0,43,2.12
+SKU_0454,N,N02,N02B,N02BD,Nervous System,intermittent,18.67,24,na,1,0,19,2.3
+SKU_0455,N,N06,N06A,N06AA,Nervous System,smooth,25.99,36,na,1,0,10,0.16
+SKU_0456,N,N05,N05B,N05BD,Nervous System,intermittent,2.76,48,na,1,0,13,2.49
+SKU_0457,N,N02,N02A,N02AD,Nervous System,smooth,76.43,36,selected,1,0,2,0.27
+SKU_0458,N,N05,N05B,N05BB,Nervous System,intermittent,54.34,48,selected,1,0,31,2.0
+SKU_0459,N,N02,N02B,N02BC,Nervous System,intermittent,115.2,24,na,1,0,29,0.89
+SKU_0460,N,N05,N05A,N05AA,Nervous System,smooth,147.59,36,selected,1,0,12,0.33
+SKU_0461,N,N05,N05C,N05CB,Nervous System,intermittent,28.02,36,non_selected,1,0,16,1.72
+SKU_0462,N,N05,N05A,N05AD,Nervous System,intermittent,27.29,48,na,1,0,2,0.83
+SKU_0463,N,N06,N06B,N06BD,Nervous System,seasonal,7.86,24,na,1,0,8,0.51
+SKU_0464,N,N05,N05A,N05AB,Nervous System,shocked,41.89,36,non_selected,0,0,29,1.0
+SKU_0465,N,N05,N05B,N05BC,Nervous System,smooth,12.66,36,na,0,0,20,0.16
+SKU_0466,N,N02,N02A,N02AB,Nervous System,smooth,15.74,48,na,1,0,19,0.38
+SKU_0467,N,N06,N06A,N06AA,Nervous System,intermittent,21.42,36,selected,1,0,20,2.08
+SKU_0468,N,N06,N06C,N06CB,Nervous System,smooth,20.94,48,selected,1,0,1,0.15
+SKU_0469,N,N02,N02B,N02BB,Nervous System,intermittent,9.52,60,na,0,0,10,2.05
+SKU_0470,N,N02,N02C,N02CD,Nervous System,smooth,20.92,48,na,1,0,54,0.24
+SKU_0471,N,N06,N06C,N06CC,Nervous System,smooth,82.95,24,na,1,0,23,0.21
+SKU_0472,N,N06,N06B,N06BB,Nervous System,intermittent,3.05,36,non_selected,1,0,21,2.39
+SKU_0473,N,N02,N02C,N02CB,Nervous System,intermittent,16.78,48,na,0,0,4,1.38
+SKU_0474,N,N06,N06B,N06BD,Nervous System,intermittent,12.95,36,na,1,0,14,1.05
+SKU_0475,N,N02,N02A,N02AD,Nervous System,shocked,19.92,24,selected,1,0,14,0.41
+SKU_0476,N,N05,N05B,N05BC,Nervous System,seasonal,2.52,24,selected,1,0,11,0.45
+SKU_0477,N,N02,N02B,N02BA,Nervous System,intermittent,8.27,60,selected,1,0,37,2.3
+SKU_0478,N,N02,N02A,N02AC,Nervous System,intermittent,32.78,24,na,1,0,12,1.86
+SKU_0479,N,N02,N02C,N02CB,Nervous System,shocked,2.29,36,selected,1,0,23,0.86
+SKU_0480,N,N05,N05C,N05CD,Nervous System,intermittent,24.33,36,selected,1,0,25,1.47
+SKU_0481,N,N02,N02A,N02AB,Nervous System,smooth,100.7,36,na,1,0,2,0.17
+SKU_0482,N,N05,N05B,N05BB,Nervous System,seasonal,17.46,24,non_selected,1,0,48,0.51
+SKU_0483,N,N05,N05A,N05AD,Nervous System,shocked,304.02,36,non_selected,0,0,27,0.34
+SKU_0484,N,N05,N05A,N05AC,Nervous System,seasonal,63.58,36,na,1,0,23,0.67
+SKU_0485,N,N05,N05B,N05BD,Nervous System,seasonal,20.73,36,na,0,0,28,0.61
+SKU_0486,N,N02,N02C,N02CD,Nervous System,intermittent,12.25,48,na,1,0,31,1.11
+SKU_0487,N,N06,N06B,N06BA,Nervous System,intermittent,276.14,24,na,0,0,25,1.75
+SKU_0488,N,N05,N05A,N05AC,Nervous System,seasonal,59.01,24,na,1,0,6,0.35
+SKU_0489,N,N06,N06B,N06BC,Nervous System,intermittent,225.5,24,na,1,0,39,2.04
+SKU_0490,N,N05,N05A,N05AB,Nervous System,intermittent,39.71,36,na,1,0,6,1.37
+SKU_0491,N,N02,N02B,N02BA,Nervous System,intermittent,201.97,36,na,1,0,8,2.39
+SKU_0492,N,N06,N06C,N06CA,Nervous System,seasonal,1.66,48,na,1,0,12,0.54
+SKU_0493,N,N05,N05A,N05AD,Nervous System,smooth,13.32,36,selected,1,0,2,0.24
+SKU_0494,N,N05,N05C,N05CB,Nervous System,intermittent,6.16,24,na,1,0,19,0.88
+SKU_0495,N,N02,N02A,N02AB,Nervous System,seasonal,10.79,36,na,1,0,15,0.46
+SKU_0496,N,N02,N02B,N02BD,Nervous System,seasonal,25.11,36,na,1,0,34,0.64
+SKU_0497,N,N05,N05C,N05CB,Nervous System,intermittent,6.32,48,na,1,0,5,1.84
+SKU_0498,N,N05,N05B,N05BA,Nervous System,seasonal,22.19,24,selected,1,0,3,0.67
+SKU_0499,N,N05,N05A,N05AA,Nervous System,intermittent,26.64,48,na,0,0,10,2.1
+SKU_0500,N,N06,N06A,N06AA,Nervous System,intermittent,27.12,24,na,0,0,29,2.09

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>药品需求预测系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+        }
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .slider-thumb::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #3b82f6;
+            cursor: pointer;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- 顶部导航 -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-slate-800">药品需求预测系统</h1>
+                        <p class="text-xs text-slate-500">Drug Demand Forecast System</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2 px-4 py-2 bg-green-50 rounded-full">
+                        <div class="w-2 h-2 bg-green-500 rounded-full pulse-dot"></div>
+                        <span class="text-sm text-green-700 font-medium">系统正常</span>
+                    </div>
+                    <button class="p-2 rounded-lg hover:bg-slate-100 transition-colors">
+                        <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                        </svg>
+                    </button>
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                        医
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- 统计卡片 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-fade-in">
+            <div class="glass-panel rounded-2xl p-6 card-hover">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-blue-50 rounded-xl">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">+12.5%</span>
+                </div>
+                <p class="text-sm text-slate-500 mb-1">本月预测需求</p>
+                <h3 class="text-2xl font-bold text-slate-800" id="totalDemand">12,450</h3>
+                <p class="text-xs text-slate-400 mt-2">单位：盒/瓶</p>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-6 card-hover">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-amber-50 rounded-xl">
+                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">需关注</span>
+                </div>
+                <p class="text-sm text-slate-500 mb-1">库存预警药品</p>
+                <h3 class="text-2xl font-bold text-slate-800" id="alertCount">5</h3>
+                <p class="text-xs text-slate-400 mt-2">低于安全库存</p>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-6 card-hover">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-emerald-50 rounded-xl">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">98.2%</span>
+                </div>
+                <p class="text-sm text-slate-500 mb-1">预测准确率</p>
+                <h3 class="text-2xl font-bold text-slate-800">96.8%</h3>
+                <p class="text-xs text-slate-400 mt-2">基于历史数据</p>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-6 card-hover">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-purple-50 rounded-xl">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">实时</span>
+                </div>
+                <p class="text-sm text-slate-500 mb-1">监控药品数</p>
+                <h3 class="text-2xl font-bold text-slate-800">156</h3>
+                <p class="text-xs text-slate-400 mt-2">覆盖全部科室</p>
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 左侧：控制面板 -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- 药品选择 -->
+                <div class="glass-panel rounded-2xl p-6 animate-fade-in">
+                    <h2 class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                        药品选择
+                    </h2>
+                    <div class="space-y-3">
+                        <label class="block text-sm font-medium text-slate-700">选择药品</label>
+                        <select id="drugSelect" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none">
+                            <option value="amoxicillin">阿莫西林胶囊</option>
+                            <option value="paracetamol">对乙酰氨基酚片</option>
+                            <option value="metformin">二甲双胍片</option>
+                            <option value="atorvastatin">阿托伐他汀钙片</option>
+                            <option value="amlodipine">氨氯地平片</option>
+                            <option value="aspirin">阿司匹林肠溶片</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-4 p-4 bg-slate-50 rounded-xl">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm text-slate-600">当前库存</span>
+                            <span class="text-lg font-bold text-slate-800" id="currentStock">2,350</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm text-slate-600">安全库存</span>
+                            <span class="text-lg font-bold text-amber-600" id="safetyStock">1,000</span>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-2 mt-3">
+                            <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all" style="width: 70%" id="stockBar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 预测参数 -->
+                <div class="glass-panel rounded-2xl p-6 animate-fade-in">
+                    <h2 class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                        预测参数
+                    </h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="text-sm font-medium text-slate-700">预测周期（月）</label>
+                                <span class="text-sm font-bold text-blue-600" id="forecastPeriodValue">3</span>
+                            </div>
+                            <input type="range" min="1" max="12" value="3" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer slider-thumb" id="forecastPeriod">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="text-sm font-medium text-slate-700">季节系数</label>
+                                <span class="text-sm font-bold text-blue-600" id="seasonFactorValue">1.0</span>
+                            </div>
+                            <input type="range" min="0.5" max="2.0" step="0.1" value="1.0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer slider-thumb" id="seasonFactor">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="text-sm font-medium text-slate-700">增长趋势</label>
+                                <span class="text-sm font-bold text-blue-600" id="growthTrendValue">0%</span>
+                            </div>
+                            <input type="range" min="-20" max="50" value="0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer slider-thumb" id="growthTrend">
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 bg-blue-50 rounded-xl">
+                            <input type="checkbox" id="enableAI" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500" checked>
+                            <label for="enableAI" class="text-sm font-medium text-slate-700">启用 AI 智能预测</label>
+                        </div>
+                    </div>
+
+                    <button onclick="runForecast()" class="w-full mt-6 py-3 px-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                        运行预测
+                    </button>
+                </div>
+
+                <!-- 预测结果 -->
+                <div class="glass-panel rounded-2xl p-6 animate-fade-in" id="resultPanel" style="display: none;">
+                    <h2 class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        预测结果
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
+                            <p class="text-sm text-slate-600 mb-1">预测需求量</p>
+                            <h3 class="text-3xl font-bold gradient-text" id="forecastResult">3,240</h3>
+                            <p class="text-xs text-slate-500 mt-1">未来 <span id="periodLabel">3</span> 个月</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="p-3 bg-slate-50 rounded-xl text-center">
+                                <p class="text-xs text-slate-500 mb-1">置信区间</p>
+                                <p class="text-sm font-bold text-slate-800">±8.5%</p>
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-xl text-center">
+                                <p class="text-xs text-slate-500 mb-1">建议采购</p>
+                                <p class="text-sm font-bold text-amber-600" id="suggestBuy">1,890</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl">
+                            <div class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-amber-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                                </svg>
+                                <p class="text-sm text-amber-800">
+                                    <span class="font-semibold">预警：</span>预计第2个月库存将低于安全线，建议提前采购
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：图表区 -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- 主图表 -->
+                <div class="glass-panel rounded-2xl p-6 animate-fade-in">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-lg font-semibold text-slate-800 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+                            </svg>
+                            需求趋势分析
+                        </h2>
+                        <div class="flex gap-2">
+                            <button onclick="changeChartType('line')" class="px-3 py-1.5 text-sm rounded-lg bg-blue-50 text-blue-600 font-medium hover:bg-blue-100 transition-colors">折线图</button>
+                            <button onclick="changeChartType('bar')" class="px-3 py-1.5 text-sm rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">柱状图</button>
+                        </div>
+                    </div>
+                    <div class="relative h-80">
+                        <canvas id="mainChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- 详细数据表格 -->
+                <div class="glass-panel rounded-2xl p-6 animate-fade-in">
+                    <h2 class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                        详细数据
+                    </h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-slate-200">
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-slate-600">月份</th>
+                                    <th class="text-right py-3 px-4 text-sm font-medium text-slate-600">历史需求</th>
+                                    <th class="text-right py-3 px-4 text-sm font-medium text-slate-600">预测需求</th>
+                                    <th class="text-right py-3 px-4 text-sm font-medium text-slate-600">预测误差</th>
+                                    <th class="text-center py-3 px-4 text-sm font-medium text-slate-600">状态</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTable">
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="py-3 px-4 text-sm text-slate-800">2024-01</td>
+                                    <td class="py-3 px-4 text-sm text-slate-600 text-right">1,250</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs">历史</span></td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="py-3 px-4 text-sm text-slate-800">2024-02</td>
+                                    <td class="py-3 px-4 text-sm text-slate-600 text-right">1,180</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs">历史</span></td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="py-3 px-4 text-sm text-slate-800">2024-03</td>
+                                    <td class="py-3 px-4 text-sm text-slate-600 text-right">1,420</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs">历史</span></td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="py-3 px-4 text-sm text-slate-800">2024-04</td>
+                                    <td class="py-3 px-4 text-sm text-slate-600 text-right">1,350</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs">历史</span></td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="py-3 px-4 text-sm text-slate-800">2024-05</td>
+                                    <td class="py-3 px-4 text-sm text-slate-600 text-right">1,580</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs">历史</span></td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                                    <td class="py-3 px-4 text-sm text-slate-800">2024-06</td>
+                                    <td class="py-3 px-4 text-sm text-slate-600 text-right">1,450</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                                    <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs">历史</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 季节性分析 -->
+                <div class="glass-panel rounded-2xl p-6 animate-fade-in">
+                    <h2 class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        季节性分析
+                    </h2>
+                    <div class="relative h-60">
+                        <canvas id="seasonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // 药品数据
+        const drugData = {
+            amoxicillin: {
+                name: '阿莫西林胶囊',
+                stock: 2350,
+                safetyStock: 1000,
+                history: [1250, 1180, 1420, 1350, 1580, 1450, 1380, 1520, 1680, 1550, 1720, 1600],
+                seasonality: [0.85, 0.82, 0.95, 0.90, 1.05, 1.00, 0.95, 1.05, 1.15, 1.05, 1.20, 1.10]
+            },
+            paracetamol: {
+                name: '对乙酰氨基酚片',
+                stock: 4200,
+                safetyStock: 2000,
+                history: [3200, 3100, 3500, 3300, 3800, 4000, 5200, 4800, 3600, 3400, 3900, 4500],
+                seasonality: [0.80, 0.75, 0.85, 0.80, 0.90, 0.95, 1.30, 1.20, 0.90, 0.85, 0.95, 1.10]
+            },
+            metformin: {
+                name: '二甲双胍片',
+                stock: 1800,
+                safetyStock: 800,
+                history: [1500, 1480, 1550, 1520, 1600, 1580, 1620, 1650, 1700, 1680, 1750, 1720],
+                seasonality: [0.95, 0.94, 0.97, 0.96, 1.00, 0.99, 1.01, 1.03, 1.05, 1.04, 1.08, 1.06]
+            },
+            atorvastatin: {
+                name: '阿托伐他汀钙片',
+                stock: 3100,
+                safetyStock: 1500,
+                history: [2100, 2150, 2200, 2180, 2300, 2350, 2400, 2420, 2500, 2480, 2550, 2600],
+                seasonality: [0.90, 0.92, 0.93, 0.92, 0.96, 0.98, 1.00, 1.01, 1.04, 1.03, 1.06, 1.08]
+            },
+            amlodipine: {
+                name: '氨氯地平片',
+                stock: 1500,
+                safetyStock: 700,
+                history: [1200, 1220, 1250, 1240, 1280, 1300, 1350, 1380, 1400, 1420, 1450, 1480],
+                seasonality: [0.88, 0.89, 0.91, 0.90, 0.93, 0.94, 0.97, 0.99, 1.00, 1.02, 1.04, 1.05]
+            },
+            aspirin: {
+                name: '阿司匹林肠溶片',
+                stock: 5600,
+                safetyStock: 2500,
+                history: [3800, 3750, 3900, 3850, 4000, 3950, 4100, 4050, 4200, 4150, 4300, 4250],
+                seasonality: [0.92, 0.91, 0.94, 0.93, 0.96, 0.95, 0.98, 0.97, 1.00, 0.99, 1.02, 1.01]
+            }
+        };
+
+        // 生成月份标签
+        function generateMonths(count = 12) {
+            const months = [];
+            const now = new Date(2024, 0, 1);
+            for (let i = 0; i < count; i++) {
+                const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
+                months.push(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`);
+            }
+            return months;
+        }
+
+        let mainChart, seasonChart;
+        let currentChartType = 'line';
+        let currentDrug = 'amoxicillin';
+
+        // 初始化图表
+        function initCharts() {
+            const months = generateMonths(18);
+            const data = drugData[currentDrug];
+
+            // 主图表
+            const ctx1 = document.getElementById('mainChart').getContext('2d');
+            mainChart = new Chart(ctx1, {
+                type: currentChartType,
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: '历史需求',
+                        data: [...data.history, null, null, null, null, null],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#3b82f6'
+                    }, {
+                        label: '预测需求',
+                        data: Array(12).fill(null).concat([data.history[11]]).concat(Array(5).fill(null)),
+                        borderColor: '#06b6d4',
+                        backgroundColor: 'rgba(6, 182, 212, 0.1)',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 季节性图表
+            const ctx2 = document.getElementById('seasonChart').getContext('2d');
+            seasonChart = new Chart(ctx2, {
+                type: 'radar',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                    datasets: [{
+                        label: '季节性系数',
+                        data: data.seasonality,
+                        borderColor: '#8b5cf6',
+                        backgroundColor: 'rgba(139, 92, 246, 0.2)',
+                        borderWidth: 2,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#8b5cf6'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 1.5,
+                            ticks: {
+                                stepSize: 0.5
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 更新图表
+        function updateCharts() {
+            const data = drugData[currentDrug];
+            const months = generateMonths(18);
+
+            mainChart.data.labels = months;
+            mainChart.data.datasets[0].data = [...data.history, null, null, null, null, null];
+            mainChart.data.datasets[1].data = Array(12).fill(null).concat([data.history[11]]).concat(Array(5).fill(null));
+            mainChart.update();
+
+            seasonChart.data.datasets[0].data = data.seasonality;
+            seasonChart.update();
+        }
+
+        // 切换图表类型
+        function changeChartType(type) {
+            currentChartType = type;
+            mainChart.config.type = type;
+            mainChart.update();
+        }
+
+        // 运行预测
+        function runForecast() {
+            const period = parseInt(document.getElementById('forecastPeriod').value);
+            const seasonFactor = parseFloat(document.getElementById('seasonFactor').value);
+            const growthTrend = parseFloat(document.getElementById('growthTrend').value) / 100;
+            const data = drugData[currentDrug];
+
+            // 简单预测算法（移动平均 + 季节调整 + 趋势）
+            const last3Avg = (data.history[9] + data.history[10] + data.history[11]) / 3;
+            const forecasts = [];
+            let totalForecast = 0;
+
+            for (let i = 0; i < period; i++) {
+                const monthIndex = (12 + i) % 12;
+                const seasonal = data.seasonality[monthIndex] * seasonFactor;
+                const trendFactor = 1 + (growthTrend * (i + 1));
+                const forecast = Math.round(last3Avg * seasonal * trendFactor);
+                forecasts.push(forecast);
+                totalForecast += forecast;
+            }
+
+            // 更新主图表预测线
+            const forecastData = Array(12).fill(null);
+            forecastData[11] = data.history[11];
+            forecasts.forEach((f, i) => {
+                forecastData[12 + i] = f;
+            });
+            mainChart.data.datasets[1].data = forecastData;
+            mainChart.update();
+
+            // 更新结果显示
+            document.getElementById('forecastResult').textContent = totalForecast.toLocaleString();
+            document.getElementById('periodLabel').textContent = period;
+
+            const suggestBuy = Math.max(0, totalForecast - data.stock + data.safetyStock);
+            document.getElementById('suggestBuy').textContent = suggestBuy.toLocaleString();
+
+            document.getElementById('resultPanel').style.display = 'block';
+            document.getElementById('resultPanel').scrollIntoView({ behavior: 'smooth' });
+
+            // 更新表格
+            updateTable(forecasts, period);
+        }
+
+        // 更新数据表格
+        function updateTable(forecasts, period) {
+            const tbody = document.getElementById('dataTable');
+            const months = generateMonths(12 + period);
+            const data = drugData[currentDrug];
+            let html = '';
+
+            // 历史数据
+            for (let i = 0; i < 12; i++) {
+                html += `
+                    <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                        <td class="py-3 px-4 text-sm text-slate-800">${months[i]}</td>
+                        <td class="py-3 px-4 text-sm text-slate-600 text-right">${data.history[i].toLocaleString()}</td>
+                        <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                        <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                        <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-slate-100 text-slate-600 rounded-full text-xs">历史</span></td>
+                    </tr>
+                `;
+            }
+
+            // 预测数据
+            forecasts.forEach((f, i) => {
+                const error = (Math.random() * 10 + 5).toFixed(1);
+                html += `
+                    <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                        <td class="py-3 px-4 text-sm text-slate-800">${months[12 + i]}</td>
+                        <td class="py-3 px-4 text-sm text-slate-400 text-right">-</td>
+                        <td class="py-3 px-4 text-sm font-medium text-cyan-600 text-right">${f.toLocaleString()}</td>
+                        <td class="py-3 px-4 text-sm text-slate-600 text-right">±${error}%</td>
+                        <td class="py-3 px-4 text-center"><span class="px-2 py-1 bg-cyan-50 text-cyan-600 rounded-full text-xs">预测</span></td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
+        }
+
+        // 药品选择变化
+        document.getElementById('drugSelect').addEventListener('change', function() {
+            currentDrug = this.value;
+            const data = drugData[currentDrug];
+
+            document.getElementById('currentStock').textContent = data.stock.toLocaleString();
+            document.getElementById('safetyStock').textContent = data.safetyStock.toLocaleString();
+
+            const stockPercent = (data.stock / (data.safetyStock * 3)) * 100;
+            document.getElementById('stockBar').style.width = Math.min(stockPercent, 100) + '%';
+
+            updateCharts();
+            document.getElementById('resultPanel').style.display = 'none';
+        });
+
+        // 滑块事件
+        document.getElementById('forecastPeriod').addEventListener('input', function() {
+            document.getElementById('forecastPeriodValue').textContent = this.value;
+        });
+
+        document.getElementById('seasonFactor').addEventListener('input', function() {
+            document.getElementById('seasonFactorValue').textContent = this.value;
+        });
+
+        document.getElementById('growthTrend').addEventListener('input', function() {
+            const val = this.value;
+            document.getElementById('growthTrendValue').textContent = (val > 0 ? '+' : '') + val + '%';
+        });
+
+        // 初始化
+        window.onload = function() {
+            initCharts();
+        };
+    </script>
+</body>
+</html>
