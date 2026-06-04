@@ -126,16 +126,17 @@ ls docs/validation/
 | Column | Description | Example |
 |--------|-------------|---------|
 | `sku_id` | Unique SKU identifier | `SKU_0001` |
-| `atc1` … `atc4` | WHO ATC hierarchy | `C` → `C10` → `C10A` → `C10AA` |
+| `name_cn` | Chinese drug name | `氨氯地平片` |
+| `name_en` | English drug name | `Amlodipine` |
+| `atc1` … `atc4` | WHO ATC hierarchy | `C` → `C08` → `C08C` → `C08CA01` |
 | `therapeutic_area` | Human-readable category | `Cardiovascular` |
 | `demand_type` | Generated pattern class | `smooth` / `seasonal` / `intermittent` / `shocked` |
-| `price_rmb` | Unit price (CNY) | `12.50` |
+| `price_rmb` | Unit price (CNY) | `8.5` |
 | `expiry_months` | Shelf life from manufacture | `36` |
 | `vbp_status` | VBP batch inclusion status | `selected` / `non_selected` / `na` |
 | `is_generic` | Generic (1) vs branded (0) | `1` |
-| `cold_chain` | Requires cold storage | `0` |
-| `base_demand` | Expected weekly baseline units | `45` |
-| `demand_cv` | Coefficient of variation | `0.35` |
+| `is_demo_sku` | Flag for demo SKUs | `1` (Metformin, Oseltamivir) |
+| `ili_elasticity` | Sensitivity to ILI% | `0.0`–`8.0` |
 
 ### Layer 2: External Signals (`external_signals.csv`)
 
@@ -148,7 +149,7 @@ ls docs/validation/
 | `is_golden_week` | Binary flag (Oct 1–7) |
 | `is_labor_day` | Binary flag (May 1–5) |
 | `is_holiday` | Union of all holiday flags |
-| `vbp_10_active` | VBP 10th round active (from 2025-04-01) |
+| `vbp_10_active` | VBP 10th round active (from 2025-04-01, instantaneous step) |
 
 ### Layer 3: Sales Transactions (`sales_data.csv`)
 
@@ -168,11 +169,13 @@ ls docs/validation/
 
 | Decision | Choice | Rationale |
 |----------|--------|-----------|
-| **Time granularity** | Weekly | Balances realism with computational efficiency; 2 years = ~104 weeks |
+| **Time granularity** | Weekly | 2024-06-01 to 2026-05-31 = ~104 weeks |
+| **SKU count** | 80 | Real Chinese drug names; stratified by demand type (16/12/44/8) |
 | **Intermittent demand** | SBA (primary), TSB (advanced) | SBA is the academic benchmark; TSB handles obsolescence risk |
 | **Censored demand** | **Not simulated** | Simplifies prototype; observed = true demand |
 | **ILI% geography** | National unified | Sufficient for demo; regional split adds complexity without proportional insight |
-| **VBP shock** | Instantaneous step change | Matches real-world policy implementation (mandated switch on effective date) |
+| **VBP shock** | Instantaneous step change (2025-04-01) | Matches real-world policy implementation (mandated switch on effective date) |
+| **Pharmacy heterogeneity** | Hospital/Chain/Independent with distinct CV and VBP response | Hospital: low CV, strong VBP shock; Independent: high CV, weaker shock |
 | **Data** | Fully synthetic | No real dataset provided; synthetic allows perfect injection of business problems (long-tail, policy shocks) |
 
 ## Reproducibility
