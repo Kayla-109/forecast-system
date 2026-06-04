@@ -1,0 +1,13 @@
+﻿date,sku_id,pharmacy_type,demand_type,units_sold,week_of_year,ili_pct,is_holiday,vbp_10_active,forecast,lower_90,upper_90
+2026-03-09,SKU_0018,hospital,smooth,138,11,2.52,0,1,175,140.0,210.0
+2026-03-16,SKU_0018,hospital,smooth,163,12,2.77,0,1,175,140.0,210.0
+2026-03-23,SKU_0018,hospital,smooth,112,13,2.88,0,1,175,140.0,210.0
+2026-03-30,SKU_0018,hospital,smooth,188,14,2.66,0,1,175,140.0,210.0
+2026-04-06,SKU_0018,hospital,smooth,229,15,3.45,0,1,175,140.0,210.0
+2026-04-13,SKU_0018,hospital,smooth,266,16,3.63,0,1,175,140.0,210.0
+2026-04-20,SKU_0018,hospital,smooth,171,17,3.77,0,1,175,140.0,210.0
+2026-04-27,SKU_0018,hospital,smooth,196,18,3.93,0,1,175,140.0,210.0
+2026-05-04,SKU_0018,hospital,smooth,88,19,3.77,1,1,175,140.0,210.0
+2026-05-11,SKU_0018,hospital,smooth,223,20,4.38,0,1,175,140.0,210.0
+2026-05-18,SKU_0018,hospital,smooth,198,21,4.66,0,1,175,140.0,210.0
+2026-05-25,SKU_0018,hospital,smooth,155,22,4.74,0,1,175,140.0,210.0
