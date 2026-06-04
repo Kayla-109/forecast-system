@@ -1,0 +1,4 @@
+﻿sku_id,name_cn,from_pharmacy,to_pharmacy,transfer_qty,from_stock,to_stock,reason
+SKU_0009,地高辛片,hospital,independent,28,104,0,hospital过剩(28)→independent缺货(39)
+SKU_0039,西格列汀片,hospital,chain,30,132,0,hospital过剩(30)→chain缺货(62)
+SKU_0061,糠酸莫米松鼻喷雾剂,independent,chain,52,117,0,independent过剩(52)→chain缺货(62)
