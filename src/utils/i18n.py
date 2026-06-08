@@ -70,6 +70,25 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "forecast_feature_importance_hint": "Top 10 features driving the forecast for this Demo SKU.",
         "forecast_feature_importance_missing": "Feature importance chart is only available for Demo SKUs (Metformin, Oseltamivir).",
         "forecast_no_data": "⚠️ Forecast data not found. Please run `python src/forecast_engine.py` first.",
+        "forecast_sku_not_found": "SKU profile not found.",
+        "forecast_loading": "Loading data...",
+        "forecast_no_hist_data": "No historical data for this SKU.",
+        "forecast_historical": "Historical",
+        "forecast_forecast_label": "Forecast",
+        "forecast_date": "Date",
+        "forecast_daily_demand": "Daily Demand",
+        "forecast_model": "Model",
+        "forecast_demand_class": "Demand Class",
+        "forecast_history_days": "History Days",
+        "forecast_features_title": "Top Features Driving the Forecast",
+        "forecast_importance": "Importance",
+        "forecast_feature": "Feature",
+        "forecast_fi_not_available": "Feature importance not available.",
+        "forecast_fi_not_xgboost": "This SKU uses the **{model}** model. Feature importance is only available for XGBoost models.",
+        "forecast_channel_total": "Total",
+        "forecast_channel_hospital": "Hospital",
+        "forecast_channel_chain": "Chain Pharmacy",
+        "forecast_channel_independent": "Independent Pharmacy",
 
         # Replenishment
         "replenishment_title": "Intelligent Replenishment",
@@ -95,6 +114,11 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "replenishment_transfer_from": "From",
         "replenishment_transfer_to": "To",
         "replenishment_transfer_qty": "Qty",
+        "replenishment_filter_priority": "Filter by Priority",
+        "replenishment_search": "Search drug",
+        "replenishment_high_priority": "High Priority",
+        "replenishment_low_priority": "Low Priority",
+        "replenishment_no_match": "No items match the current filters.",
 
         # Inventory Health
         "inventory_title": "Inventory Health Dashboard",
@@ -109,6 +133,9 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "inventory_expiry_risk_count": "Near Expiry (< 6 mo)",
         "inventory_abc_tooltip": "ABC = Revenue concentration (A=top 80%). XYZ = Demand volatility (X=stable, Z=erratic).",
         "inventory_expiry_tooltip": "Red zones indicate lots with less than 6 months remaining shelf life.",
+        "inventory_a_class": "A-Class",
+        "inventory_x_class": "X-Class (Stable)",
+        "inventory_z_class": "Z-Class (Volatile)",
 
         # Policy Simulator
         "simulator_title": "VBP Policy Simulator",
@@ -129,6 +156,12 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "simulator_channel_chain": "Chain Pharmacy",
         "simulator_channel_independent": "Independent Pharmacy",
         "simulator_table_title": "Affected SKU Details",
+        "simulator_batch_label": "Batch",
+        "simulator_avg_price_drop": "Avg Price Drop",
+        "simulator_avg_volume_uplift": "Avg Volume Uplift",
+        "simulator_price_drop_chart": "Price Drop by SKU",
+        "simulator_price_drop_pct": "Price Drop %",
+        "simulator_drug": "Drug",
 
         # Alerts
         "alerts_title": "Alert Center",
@@ -144,6 +177,7 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "alerts_total_stockout": "Stockout Alerts",
         "alerts_total_expiry": "Expiry Alerts",
         "alerts_filter_pharmacy": "Filter by Pharmacy",
+        "alerts_more": "... and {n} more alerts.",
 
         # Common
         "loading": "Loading data...",
@@ -216,8 +250,27 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "forecast_trend_flat": "➡️ 平稳",
         "forecast_feature_importance": "XGBoost特征重要性",
         "forecast_feature_importance_hint": "驱动该Demo SKU预测结果的Top 10特征。",
-        "forecast_feature_importance_missing": "特征重要性图仅对Demo SKU（二甲双胍、奥司他韦）可用。",
-        "forecast_no_data": "⚠️ 未找到预测数据。请先运行 `python src/forecast_engine.py` 生成数据。",
+        "forecast_feature_importance_missing": "特征重要性图仅对XGBoost模型可用。",
+        "forecast_no_data": "⚠️ 未找到预测数据。",
+        "forecast_sku_not_found": "未找到该SKU画像。",
+        "forecast_loading": "加载数据中...",
+        "forecast_no_hist_data": "未找到该SKU历史数据。",
+        "forecast_historical": "历史销量",
+        "forecast_forecast_label": "预测值",
+        "forecast_date": "日期",
+        "forecast_daily_demand": "日度需求",
+        "forecast_model": "预测模型",
+        "forecast_demand_class": "需求类型",
+        "forecast_history_days": "历史天数",
+        "forecast_features_title": "预测驱动因素Top15",
+        "forecast_importance": "重要性",
+        "forecast_feature": "特征",
+        "forecast_fi_not_available": "特征重要性不可用。",
+        "forecast_fi_not_xgboost": "该SKU使用**{model}**模型。特征重要性仅对XGBoost模型可用。",
+        "forecast_channel_total": "总计",
+        "forecast_channel_hospital": "医院",
+        "forecast_channel_chain": "连锁药店",
+        "forecast_channel_independent": "单体药店",
 
         # Replenishment
         "replenishment_title": "智能补货",
@@ -243,6 +296,11 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "replenishment_transfer_from": "调出",
         "replenishment_transfer_to": "调入",
         "replenishment_transfer_qty": "数量",
+        "replenishment_filter_priority": "按优先级筛选",
+        "replenishment_search": "搜索药品",
+        "replenishment_high_priority": "高优先级",
+        "replenishment_low_priority": "低优先级",
+        "replenishment_no_match": "没有匹配当前筛选条件的项目。",
 
         # Inventory Health
         "inventory_title": "库存健康仪表盘",
@@ -257,6 +315,9 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "inventory_expiry_risk_count": "临近效期（<6月）",
         "inventory_abc_tooltip": "ABC = 销售额集中度（A=前80%）。XYZ = 需求波动度（X=稳定，Z=波动大）。",
         "inventory_expiry_tooltip": "红色区域表示效期不足6个月的批次。",
+        "inventory_a_class": "A类",
+        "inventory_x_class": "X类（稳定）",
+        "inventory_z_class": "Z类（波动大）",
 
         # Policy Simulator
         "simulator_title": "VBP 集采政策模拟器",
@@ -277,6 +338,12 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "simulator_channel_chain": "连锁药店",
         "simulator_channel_independent": "单体药店",
         "simulator_table_title": "受影响 SKU 明细",
+        "simulator_batch_label": "批次",
+        "simulator_avg_price_drop": "平均降价幅度",
+        "simulator_avg_volume_uplift": "平均销量 uplift",
+        "simulator_price_drop_chart": "各SKU降价幅度",
+        "simulator_price_drop_pct": "降价幅度(%)",
+        "simulator_drug": "药品",
 
         # Alerts
         "alerts_title": "预警中心",
@@ -292,6 +359,7 @@ for China's largest out-of-hospital (OOH) pharmaceutical B2B platform.
         "alerts_total_stockout": "断货预警数",
         "alerts_total_expiry": "效期预警数",
         "alerts_filter_pharmacy": "按药店筛选",
+        "alerts_more": "... 还有{n}条预警。",
 
         # Common
         "loading": "加载数据中...",

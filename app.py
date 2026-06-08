@@ -84,9 +84,9 @@ st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 def check_data_availability() -> dict:
     """Check if required data files exist."""
     checks = {
-        "master_data": Path("data/raw/master_data.csv").exists(),
-        "sales_data": Path("data/raw/sales_data.csv").exists(),
-        "forecast_reports": len(list(Path("reports").glob("forecast_detail_*.csv"))) > 0,
+        "Early-bird products": Path("Early-bird_Module4_case2/data/products.csv").exists(),
+        "Early-bird demand": Path("Early-bird_Module4_case2/data/demand_daily.csv").exists(),
+        "Early-bird forecasts": Path("Early-bird_Module4_case2/results/ets_predictions.csv").exists(),
     }
     return checks
 
